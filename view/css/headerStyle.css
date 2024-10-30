@@ -1,0 +1,133 @@
+* { /* aplique para todos*/
+    border: 0; /*tudo vai está colado inicialmente*/
+    margin: 0;
+    text-decoration: none;
+}
+
+header{
+    width: 90%; /* ocuppy 90% of the available horizontal space*/
+    height:10vh;
+    padding: 0 5%;
+    display: flex; /*deixe os items um "ao lado do outro"*/
+    flex-flow: row wrap;  /*deixe os caras numa fileiras, mas se não tiver espaço deixe-os wrap*/
+    justify-content: space-evenly; /*deixe-os igualmente espaçados*/
+    align-items: center;
+    font-family: Roboto;
+    background-color:#FCFCFC;
+
+    border-bottom: 1px solid #e5e5e5;
+    
+}
+
+header nav{
+    width:40%;
+    height: 10vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav a{
+    text-decoration: none;
+    width:22%;
+    align-items: center; /*center ver*/
+    justify-content: center;
+    display: flex;
+    color:#55A694;
+    
+    
+
+    /* #2e6c5e */;
+}
+
+header nav a:hover{
+    transform: color 500ms ease;
+    color: #55A694;
+    font-weight: bold;
+}
+
+header #icon{
+    width: 30%;
+    height: 10vh;
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header #icon h1{
+    width: 45%;
+    font-size: 1.4rem;
+    text-align: center;
+    color:#55A694;
+    
+}
+
+header #icon span{
+    color: #2c7666;
+}
+
+header #icon img{
+    width: 21%;
+    height: auto;
+}
+
+header #icon:hover{
+    transition: transform ease 500ms;
+    transform: scale(1.05);
+}
+
+header aside:last-child{
+    height: 10vh;
+    width:30%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    position:relative;
+    color:#55A694;
+
+
+}
+
+header aside:last-child img{
+    width: auto;
+    height: 5vh;
+    padding: 0.5vh;
+}
+
+header aside:last-child h2{
+    font-size: 1.2rem;
+    padding: 0 2%;
+}
+
+header aside:last-child h3{
+    top:10vh;
+    width:100%;
+    padding: 2vh 0;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1rem;
+    z-index: 10;
+
+    position: absolute; 
+    /*display: none;*/
+}
+
+header aside:last-child h2:hover{
+    cursor: pointer;
+    color: #3e7c6f;
+}
+
+header aside:last-child h3:hover{
+    cursor: pointer;
+    color: #3e7c6f;
+}
+
+
+header #displayConfig{
+    visibility: hidden;
+}
