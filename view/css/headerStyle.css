@@ -2,6 +2,8 @@
     border: 0; /*tudo vai está colado inicialmente*/
     margin: 0;
     text-decoration: none;
+
+    overflow: hidden; /*.... POSSO RETIRAR ISSO DEPOIS... SE PRECISO */
 }
 
 header{
@@ -116,7 +118,9 @@ header aside:last-child h3{
 
     position: absolute;
     text-align: center;
+    /**/
     display: none;
+    
 }
 
 /*
