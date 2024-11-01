@@ -20,6 +20,8 @@ main #bunchCover{
     border: 10px solid #83CF8F;
     */
     border-radius: 25px;
+    bottom: 10%;
+    right: 10%;
 }
 
 main section{
@@ -89,5 +91,5 @@ main section .correct{
     position: relative;
     width: auto;
     height: 5vh;
-    margin-left: 2vh;
+    margin-left: 4vh;
 }
