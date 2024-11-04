@@ -1,0 +1,195 @@
+*{
+    
+list-style-type:none;
+    
+    
+}
+
+main{
+    background-color: #FCFCFC;
+    
+    /*
+    border: 2px solid red;
+    */
+
+    width: 100%;
+    height: 90vh;
+    position:relative;/*BEM IMPORTANTE*/
+
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+
+}
+
+main .sectionFilter{
+    /*
+    border: 2px solid blue;
+    */
+
+    width: 20%;
+    height: 90vh;
+    
+}
+
+main .sectionFilter h2{
+    /*
+    border: 2px solid black;
+    */
+
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    */
+
+    padding: 5px;
+    
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-family: "Raleway","sans-serif"; /*mudar isso : a fonte*/
+    border-bottom: 1px solid #e5e5e5;
+    
+}
+
+main .sectionFilter h3{
+    /*
+    border: 2px solid black;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    */
+
+    font-size: 1.5rem;
+
+    padding: 5px;
+    margin:3px 0px;
+
+    font-family: "Raleway","sans-serif";
+    font-size: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    
+    
+}
+
+main aside ul {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+
+    padding: 4px;
+}
+
+main aside ul li{
+    /*
+    border: 2px green solid;
+    */
+    float: left;
+    width: 100%;
+     
+    text-align:left;
+    font-family: "Raleway","sans-serif";
+    padding: 5px 0;
+    font-size: 15px; 
+    
+}
+
+main aside ul li:hover{
+    font-weight: bold;
+    cursor: pointer;
+    color:#55A694;
+}
+
+
+main .sectionBook{
+    /*
+    border: 2px red solid;
+    */
+
+    width: 60%;
+    height: 90vh;
+}
+
+main article .listBook{
+    /*
+    border: 2px green solid;
+    */
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+   
+
+    align-items: center;
+    justify-content: left; /* mudar isso: pode ser left?*/
+
+}
+
+main article .book{
+    
+    border: 1px solid #e5e5e5;
+    margin:2px;
+    border-radius: 10px;
+    
+    width:32%;
+
+    text-align:center;
+    font-family: "Raleway","sans-serif";
+
+    display: flex;
+    flex-flow: column wrap;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+main article .bookImg{
+    /*
+    border: 2px black solid;
+    */
+
+    width: 181.3px;
+    height: 266px;
+    display: block;
+    
+    margin-top: 10px;
+    
+}
+
+main article img{
+    width: 100%;
+    height: 100%;
+
+}
+
+main article .bookText p{
+    /*
+    border: 2px green solid;
+    */
+
+    padding: 10px;
+}
+
+main article .bookText p:last-child{
+    border-radius: 25px;
+    background-color: #2c7666;
+    color: white;
+    margin-bottom: 10px;
+}
+
+main article .bookText p:last-child:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
