@@ -258,7 +258,7 @@ main section:last-child h3{
 
 main section:last-child #coverFrame{
 
-    border: 1px solid black;
+    border: 1px solid #e5e5e5;
 
     display: flex;
     justify-items: center;

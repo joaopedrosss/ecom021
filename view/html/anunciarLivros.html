@@ -53,7 +53,11 @@
             Id
         -->
 
+       
         <section>
+
+        
+    
             <aside class="DisplayLeft">
                 
                 <div class="titleForm"> Título</div>
@@ -236,7 +240,7 @@
                 Capa do livro
             </h3>
             <div id="coverFrame">
-                <img id="preview" src="" alt="" style="display: none;">
+                <img id="preview" src="/LivrosAqui/view/css/media/no-imagem.gif" alt="" >
             </div>
 
         </section>
@@ -275,6 +279,7 @@
                 var imagem = document.getElementById('preview');
                 imagem.src = leitorArquivo.result;
                 imagem.style.display = 'block';
+                imagem.style = "height: 100%";
             };
             leitorArquivo.readAsDataURL(event.target.files[0]);
         });
