@@ -1,0 +1,284 @@
+main{
+    width: 100%;
+    height: 90vh;
+    
+    display:flex;
+    position:relative; /* ? */
+
+    flex-flow: row wrap; /* ? */
+    justify-content: center;
+    align-items: center;
+
+    font-family: Roboto; /* Sujeito a mudanças */
+
+    background-color: #FCFCFC;
+
+}
+
+main section:first-child{
+    background-color: #a0a0a047; /*Por enquanto*/
+
+    height: 100%;
+    width: 65%;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main section:first-child aside{
+    width:50%;
+    height:100%;
+}
+
+
+main .DisplayLeft{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+main .DisplayLeft .titleForm{
+    
+    width: 90%;
+    height:3vh;
+    margin: 1vh 0;
+    font-size:1rem;
+    
+}
+
+main .DisplayLeft .text{
+    width:90%;
+    height:4vh;
+    outline:0;
+
+    
+    color:0; /*mudar isso; tem que ser da mesma cor do parent*/
+    
+    
+    border-bottom: 0.5vh solid #55A694;
+
+
+}
+
+main .DisplayLeft .text::placeholder{
+    color: black ; /*Mudar isso*/
+}
+
+main .DisplayLeft .select{
+    width:90%;
+    height: 4vh;
+    outline:0;
+    color:black;
+}
+
+main .DisplayRight{
+    Display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+/**/
+
+main .DisplayRight .titleForm{
+    
+    width: 90%;
+    height:3vh;
+    margin: 1vh 0;
+    font-size:1rem;
+    
+}
+
+main .DisplayRight .text{
+    width:90%;
+    height:4vh;
+    outline:0;
+
+    
+    color:0; /*mudar isso; tem que ser da mesma cor do parent*/
+    
+    
+    border-bottom: 0.5vh solid #55A694;
+
+
+}
+
+main .DisplayRight .text::placeholder{
+    color: black ; /*Mudar isso*/
+}
+
+main .DisplayRight .select{
+    width:90%;
+    height: 4vh;
+    outline:0;
+    color:black;
+}
+
+
+
+/**/
+
+main .DisplayRight .arq{
+    margin: 1vh 0;
+    color: black;
+    padding: 0.5vh 0.2vh;
+    border: 5px solid;
+    display:none;
+    /*
+     margin: 1vh 0;
+                color: black;
+                padding: 0.5vh 0.2vh;
+                background-color:white;
+                display: none;
+    */
+}
+
+
+main .DisplayRight .textD{
+    width:90%;
+    height:14vh;
+    outline: 0;
+    resize:none;
+
+    color: black; /*Mudar isso*/
+    border-bottom: 0.5vh solid #55A694;
+
+    background-color: #FCFCFC; /* mudar isso*/
+}
+
+
+main .DisplayRight .label{
+    /*
+    width: 40%;
+                height: 3vh;
+                margin: 0.5vh 0;
+                padding: 1vh 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+                background-color: white;
+    */
+    
+    width:50%;
+    height: 3vh;
+    border: 2px solid #2c7666; 
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0.5vh 0;
+    padding: 1vh 0;
+
+    color: #2c7666;
+    background-color: white;
+    
+    
+}
+
+
+main .DisplayRight .label:hover{
+    cursor: pointer;
+}
+
+main .DisplayRight p{
+
+    /*
+    
+    width: 50%;
+                font-size: 1.2rem;
+                text-align: center;
+                padding: 1vh 0;
+                margin: 15vh 0;
+                background-color: red;
+    */
+
+    background-color: #2c7666;
+
+    margin: 10vh 0;
+    padding: 2vh 0;
+    width: 64%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+
+    border-radius: 25px;
+    color:white;
+
+
+}
+
+main .DisplayRight p:hover{
+    cursor: pointer;
+}
+
+main .DisplayRight #Novo{
+    width:90%;
+    height: 4vh;
+    outline:0;
+    color:black;
+    display: flex;
+    
+    justify-content: center;
+}
+
+main section:last-child{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+
+    align-items: center;
+}
+
+main section:last-child h3{
+    /*
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: red;
+    */
+
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 1.5rem;
+    color:#2c7666;
+}
+
+main section:last-child #coverFrame{
+
+    border: 1px solid black;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    
+    /*
+    width: 90%;
+    height: 80%;
+    */
+    width:90%;
+    height: 80%;
+}
+
+main section:last-child #preview{
+    
+    width:100%;
+    height: 100%;
+    
+
+    display: flex;
+    justify-items: center;
+    
+}
