@@ -65,12 +65,26 @@ class Server():
             if path == "setLivro":
                 print("Inserindo livro no banco de dados...")
                 livro_db = DataBaseLivro()
+
                 livro_db.path = "DB\\livros\\Data_livro.json"
+                
                 livro_db.setLivro(bodyPOST) #CONSERTAR ISSO.
                 print("Livro inserido com sucesso!")
                 client_socket.sendall(b'HTTP/1.1 201 OK\r\n\r\nSucesso')
                  #mande uma resposta ao client. e mande tudo TUDO. 
                  #mande na forma de bytes - (b'')
+            """
+            if path == 'setUser': # IMPLEMENTAR ISSO
+                db = DataBaseUser()
+
+                db.path = "DB\\users\\UserData.json"
+
+                db.setUser(data)
+                print('Usuário setado com Sucesso!')                
+                socketClient.sendall(b'HTTP/1.1 201 OK\r\n\r\nSucesso')
+            
+            """
+
 
             client_socket.close()
     
