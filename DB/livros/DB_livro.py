@@ -14,12 +14,12 @@ class DataBaseLivro:
             json.dump(lista_de_livros, file)
 
     def setJson(self,dict_data): #gets a 'dict_data', a set of key:value items. like {"model":"bmw","year":1902} in, now, a STRING format.
-
+        print("DICIOTNARY DATA:\n",dict_data)
     
     #example:
     #    "{'Nome':'John','Sobrenome':'Doe','Email':'john.doe@example.com','Titulo':'Carro Esportivo','Descricao':'Carro rápido e confortável'}"
 
-    
+
         lista = []
         lista_len = len(lista)
 
