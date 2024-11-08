@@ -8,11 +8,9 @@
 }
 """
 
-"""
 import json
 import smtplib
 from email.message import EmailMessage
-from model.user import User
 
 """
 {
@@ -21,7 +19,7 @@ from model.user import User
 "Email": "a@gmail.com",
 "Password": "8989w"
 }
-
+"""
 
 class DataBaseUser:
     def __init__(self):
@@ -40,17 +38,6 @@ class DataBaseUser:
         Lista = []
         size = len(data)
         data = data[1:size-1]
-
-        """
-        "Zahav"
-          "Alkmir" 
-         "al@gmail"
-        "Titulo","O caminho para vencer",
-        "Autor":"Desconhecido",
-        "Ano":"2020",
-        "Editora":"Editordedadwd ABC"
-
-        """
         
         data = data.split(',')
         for dt in data:
