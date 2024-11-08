@@ -77,7 +77,7 @@ class Server():
             if path == 'setUser': # IMPLEMENTAR ISSO
                 db = DataBaseUser()
 
-                db.path = "DB\\users\\UserData.json"
+                db.path = "DB//users//Data_livro.json" 
 
                 db.setUser(data)
                 print('Usuário setado com Sucesso!')                
