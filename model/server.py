@@ -73,17 +73,17 @@ class Server():
                 client_socket.sendall(b'HTTP/1.1 201 OK\r\n\r\nSucesso')
                  #mande uma resposta ao client. e mande tudo TUDO. 
                  #mande na forma de bytes - (b'')
-            """
-            if path == 'setUser': # IMPLEMENTAR ISSO
-                db = DataBaseUser()
+                """
+                if path == 'setUser': # IMPLEMENTAR ISSO
+                    db = DataBaseUser()
 
-                db.path = "DB//users//Data_livro.json" 
+                    db.path = "DB//users//Data_livro.json" 
 
-                db.setUser(data)
-                print('Usuário setado com Sucesso!')                
-                socketClient.sendall(b'HTTP/1.1 201 OK\r\n\r\nSucesso')
-            
-            """
+                    db.setUser(data)
+                    print('Usuário setado com Sucesso!')                
+                    socketClient.sendall(b'HTTP/1.1 201 OK\r\n\r\nSucesso')
+                
+                """
 
 
             client_socket.close()

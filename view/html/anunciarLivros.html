@@ -55,7 +55,19 @@
 
        
         <section>
-
+            <!--
+                Titulo
+                Autor
+                Ano
+                Editora
+                Edicao
+                Preco
+                Genero
+                Descricao
+                Paginas
+                Novo
+                FotoCapa
+            -->
         
     
             <aside class="DisplayLeft">
@@ -186,13 +198,7 @@
                 <input type="text" class="text" id="Edicao" placeholder="Insira aqui o número da edição">
 
                 <div class="titleForm">Preço</div>
-                <input type="text" class="text" id="Edicao" placeholder="Insira aqui o número da edição">
-
-
-                
-
-            </aside>
-            <aside class="DisplayRight">
+                <input type="text" class="text" id="Preco" placeholder="Insira aqui o número da edição">
 
                 <div class="titleForm"> Gênero</div>
                 <select id="Genero" class="select">
@@ -216,6 +222,14 @@
                     <option value="Crônica">Crônica</option>
                 </select>
 
+
+                
+
+            </aside>
+            <aside class="DisplayRight">
+
+                
+
                 <div class="titleForm">Número de páginas</div>
                 <input type="text" class="text" id="Paginas" placeholder="Insira aqui número de páginas">
 
@@ -228,9 +242,17 @@
                     <option value="Usado">Usado</option>
                 </select>
 
+                <div class="titleForm">Link</div>
+                <input type="text" class="text" id="FotoCapaR" placeholder="Insira aqui o link da foto de capa">
+
+
                 <div class="titleForm">Foto do livro:</div>
-                <label for="FotoCapa" class="label" id="">Selecione a foto</label>
-                <input type="file" name="FotoCapa" id="FotoCapa" class="arq">
+                
+                <label for="FotoCapa" class="label" id="FotoCapa">Ver capa do livro</label>
+                
+                
+                
+
 
                 <p onclick="adicionarLivro()">Anunciar livro</p>
         </section>
@@ -260,37 +282,107 @@
     </main>
 
     <script>
+        /*
+                Titulo
+                Autor
+                Ano
+                Editora
+                Edicao
+                Preco
+                Genero
+                Descricao
+                Paginas
+                Novo
+                FotoCapa
+        */
 
-        
 
-        function adicionarLivro(){
+        const Titulo = document.getElementById('Titulo')
+        const Autor = document.getElementById('Autor');
+        const Ano = document.getElementById('Ano');
+        const Editora = document.getElementById('Editora');
+        const Edicao = document.getElementById('Edicao');
+        const Preco = document.getElementById('Preco');
+        const Genero = document.getElementById('Genero');
+        const Descricao = document.getElementById('Descricao');
+        const Paginas = document.getElementById('Paginas');
+        const Novo = document.getElementById('Novo');
+        const FotoCapa = document.getElementById('FotoCapaR');
 
-        }
 
+
+       
 
         /*
-        document.getElementById('FotoCapa').addEventListener('change', function(event) {
-            var reader = new FileReader();
-            reader.onload = function() {
-                var output = document.getElementById('preview');
-                output.src = reader.result;
-                output.style.display = 'block'; // Exibe a imagem
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        });
-        */
-        
-        /*Exibir prévia de capa de livro*/
-        document.getElementById('FotoCapa').addEventListener('change',function(event){
+        document.getElementById('FotoCapaP').addEventListener('click',function(event){
             var leitorArquivo = new FileReader();
             leitorArquivo.onload = function(){
                 var imagem = document.getElementById('preview');
                 imagem.src = leitorArquivo.result;
                 imagem.style.display = 'block';
                 imagem.style = "height: 100%";
+
+                storedImage = event.target.files[0];
             };
             leitorArquivo.readAsDataURL(event.target.files[0]);
         });
+        */
+       
+        document.getElementById('FotoCapa').addEventListener('click',function(event){
+
+        
+            console.log(FotoCapa.value)
+            if(FotoCapa.value != ""){
+                var imagem = document.getElementById('preview');
+                imagem.src = FotoCapa.value;
+            }else{
+                alert("insira o link para a foto de capa antes!")
+            }
+            
+            
+        });
+
+        
+
+
+        function adicionarLivro(){
+            const request = new  XMLHttpRequest()
+
+            //request.open("POST","http://0.0.0.0/setLivro")
+            request.open("POST","/setLivro")
+            //request.setRequestHeader("Content-Type", "application/json; charset=UTF-8")
+            request.setRequestHeader("Content-Type", "application/json")
+            var data_livro = JSON.stringify({
+                "Nome":"Bianca",
+                "Sobrenome":"Alkmi",
+                "Email": "al@gmail",
+                "Titulo": Titulo.value,
+                "Autor": Autor.value,
+                "Ano":Ano.value,
+                "Editora":Editora.value,
+                "Edicao":Edicao.value,
+                "Preco":Preco.value,
+                "Genero":Genero.value,
+                "Paginas":Paginas.value,
+                "Descricao":Descricao.value,
+                "Novo":Novo.value,
+                "Foto":FotoCapa.value
+            })
+            request.send(data_livro)
+            console.log("aQUI") //mudar o serivdr para isso: http://127.0.0.1:5500/setLivro 
+            request.onload = () => {
+                if (request.readyState == 4 || request.status == 201){
+                    alert(`Enviado com sucesso`);
+                } else {
+                    alert(`Erro, por favor tente novamente!`);
+                }
+            }
+        }
+
+
+        
+        
+        /*Exibir prévia de capa de livro*/
         
 
     </script>

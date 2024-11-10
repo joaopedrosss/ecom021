@@ -50,6 +50,7 @@ class DataBaseLivro:
             "Descricao": lista[11],
             "Novo": lista[12],
             "Foto": lista[13] 
+            #Vendido: lista[14]
             #adicionar um atributo id: mudar isso (?)
         }
 

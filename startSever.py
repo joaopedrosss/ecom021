@@ -1,6 +1,8 @@
 from model.server import Server
 
-serverLivrosAqui = Server("Livros Aqui","0.0.0.0",80)
+#serverLivrosAqui = Server("Livros Aqui","0.0.0.0",80)
+serverLivrosAqui = Server("Livros Aqui","127.0.0.1",5500)
+
 serverLivrosAqui.start()
 
 """
