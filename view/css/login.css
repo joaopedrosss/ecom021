@@ -1,0 +1,106 @@
+/* Centralizar o container na tela */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilizar o card de login */
+.card {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Título */
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizar campos de entrada */
+.label-float {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.label-float input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.label-float label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+/* Estilo para o botão */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para o link de cadastro */
+p {
+  margin-top: 20px;
+  color: #333;
+}
+
+p a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Justificativa centralizada para divisores e botões */
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
